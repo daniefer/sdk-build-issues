@@ -78,7 +78,7 @@ jobs:
     inputs:
       command: publish
       publishWebProjects: false
-      projects: '$(Parameters.RestoreBuildProjects)'
+      projects: '**/*.csproj'
       arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
       zipAfterPublish: True
 
