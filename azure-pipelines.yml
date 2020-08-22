@@ -4,6 +4,7 @@ pool:
 
 jobs:
 - job: Broken
+  displayName: Broken
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core sdk 2.2.x'
@@ -42,7 +43,8 @@ jobs:
     condition: succeededOrFailed()
 
 
-- job: Not Broken
+- job: Not_Broken
+  displayName: Not Broken
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core sdk 2.2.x'
